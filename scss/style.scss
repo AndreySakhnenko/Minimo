@@ -1,0 +1,24 @@
+@use "header" as *;
+@use "hero" as *;
+@use "blocks" as *;
+@use "singup" as *;
+@use "footer" as *;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inconsolata", monospace;
+  font-family: "Playfair Display", serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}

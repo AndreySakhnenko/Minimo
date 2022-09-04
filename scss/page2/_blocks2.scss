@@ -1,0 +1,49 @@
+.blocks {
+  background-color: #f0f0f0;
+  &_container {
+    padding: 70px 20px;
+  }
+  &_content {
+    padding: 0 80px;
+    &__title {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #b4ad9e;
+      margin-bottom: 40px;
+    }
+    &__cards {
+      display: grid;
+      gap: 38px;
+      grid-template-columns: repeat(3, 1fr);
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0;
+        gap: 30px;
+      }
+    }
+  }
+}
+.block {
+  &_img {
+    margin-bottom: 24px;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_text {
+    font-family: "PlayfairDisplay";
+    font-size: 20px;
+    line-height: 23px;
+    color: #626262;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.header {
+  &_container {
+    padding: 69px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_logo {
+    &__link {
+      font-family: "Inconsolata";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 24px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+  }
+  &_nav {
+    max-width: 623px;
+    width: 100%;
+  }
+  &_list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_item {
+  }
+  &_link {
+    font-family: "PlayfairDisplay";
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #626262;
+    transition: all 1s ease-in-out;
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0;
+      width: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: black;
+      content: "";
+      transition: all 0.5s ease-out;
+    }
+    &:hover {
+      color: black;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:focus:after {
+      width: 100%;
+    }
+  }
+}
+.burger {
+  display: none;
+  height: 40px;
+  width: 40px;
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #626262;
+    transition: transform 0.2s ease-in;
+  }
+
+  &.active .bar:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+  }
+
+  &.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .header_list {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    max-width: 300px;
+    width: 100%;
+    background: rgba(#181511, 1);
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.2s ease-in-out;
+    gap: 35px;
+    &.active {
+      right: 0;
+    }
+  }
+  .header_link {
+    font-size: 30px;
+    color: #626262;
+    padding: 15px 0;
+  }
+
+  .burger {
+    display: flex;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 475px) {
+  .header_list {
+    max-width: 100%;
+    opacity: 0.9;
+    width: 100%;
+  }
+}

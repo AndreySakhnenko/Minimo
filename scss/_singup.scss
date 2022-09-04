@@ -1,0 +1,40 @@
+.sing-up {
+  background-color: #f0f0f0;
+  &_container {
+    padding: 75px 20px;
+  }
+  &_content {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 50px;
+    &__subtitle {
+      font-family: "PlayfairDisplay";
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 0.75px;
+      color: #333333;
+      margin-bottom: 80px;
+    }
+  }
+}
+label {
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  & > svg {
+    transform: rotate(45deg);
+    fill: #626262;
+    cursor: pointer;
+  }
+}
+input {
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  background-color: transparent;
+}
